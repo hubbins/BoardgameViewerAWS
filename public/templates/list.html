@@ -1,0 +1,23 @@
+<div>
+    <table class="table table-condensed">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Players</th>
+                <th>Owner</th>
+                <th>BGG</th>
+                <th>Comment</th>
+                <th>Remove</th>
+            </tr>
+        </thead>
+        <tr ng-repeat="game in games">
+            <td>{{game.Name}}</td>
+            <td>{{game.NumberOfPlayers}}</td>
+            <td>{{game.OwnerName}}</td>
+            <td><a ng-href="{{game.BGGLink}}" title="BoardGameGeek" target="_blank"><span class="glyphicon glyphicon-globe"></span></a></td>
+            <td>{{game.Comment}}</td>
+            <td ng-if="game.OwnerID==user.user.id"><a ng-href="#delete/{{game._id}}"><span class="glyphicon glyphicon-minus"></span></a></td>
+            <td ng-if="game.OwnerID!=user.user.id"><span class="glyphicon glyphicon-ban-circle"></span></td>
+        </tr>
+    </table>
+</div>
