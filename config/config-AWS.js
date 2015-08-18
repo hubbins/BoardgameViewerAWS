@@ -18,5 +18,5 @@ config.security.SESSION_SECRET = "somesecret";
 config.database = {}
 
 config.database.provider = "postgresProvider";
-config.database.url = "postgres://postgres:XKVx6zDc88rwt7S@aasbxb491rwmk6.c0iriragsnea.us-east-1.rds.amazonaws.com/games";
+config.database.url = "postgres://postgres:SECRET@aasbxb491rwmk6.c0iriragsnea.us-east-1.rds.amazonaws.com/games";
 
